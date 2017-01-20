@@ -1,5 +1,10 @@
 #language: shell
 
+
+matrix:
+  include:
+      - env: COVERAGE=0 
+      - env: COVERAGE=1 
 cache:
   directories:
     - $HOME/.m2/repository
