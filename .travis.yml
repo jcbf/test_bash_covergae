@@ -15,7 +15,7 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - gem install bashcov
+  - gem install -V  bashcov
   - gem install coveralls
   - gem contents bashcov
   - sh -e misc/ci-setup.sh
