@@ -1,0 +1,17 @@
+#language: shell
+
+cache:
+  directories:
+    - $HOME/.m2/repository
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - gem install bashcov
+  - gem install coveralls
+  - coveralls -v
+  - sh -e misc/ci-setup.sh
+
+script:
+  - sh -e misc/ci-runtest.sh
