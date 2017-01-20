@@ -1,6 +1,6 @@
 #language: shell
 
-sudo: false
+#sudo: false
 
 
 matrix:
