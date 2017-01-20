@@ -17,6 +17,7 @@ before_install:
 install:
   - gem install bashcov
   - gem install coveralls
+  - gem contents bashcov
   - sh -e misc/ci-setup.sh
 
 script:
