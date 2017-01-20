@@ -16,7 +16,7 @@ host jasan.tk
 
 
 if [ "x1" = "x$COVERAGE" ] ; then
-	bashcov -- tests/test-shell.sh 
+	bashcov -- ./despf.sh underspell.com
 else
 	tests/test-shell.sh || DEBUG=1 tests/test-shell.sh
 fi
