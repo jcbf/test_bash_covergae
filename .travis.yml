@@ -3,7 +3,7 @@
 
 matrix:
   include:
-      - env: COVERAGE=0 
+#      - env: COVERAGE=0 
       - env: COVERAGE=1 
 cache:
   directories:
@@ -15,7 +15,6 @@ before_install:
 install:
   - gem install bashcov
   - gem install coveralls
-  - coveralls -v
   - sh -e misc/ci-setup.sh
 
 script:
