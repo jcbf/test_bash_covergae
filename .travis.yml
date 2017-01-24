@@ -1,6 +1,6 @@
 language: ruby
-rvm:
-   - 2.2.5
+#rvm:
+#   - 2.2.5
 matrix:
 env:
    - PROGRAM="bashcov -r coveralls:Coveralls::SimpleCov::Formatter --" 
