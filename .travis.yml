@@ -16,6 +16,6 @@ install:
   - sudo gem update --system
   - bundle install
   - sh -e misc/ci-setup.sh
-  - export PATH="$PATH:$PWD"
+#  - export PATH="$PATH:$PWD"
 script:
   - sh -e misc/ci-runtest.sh

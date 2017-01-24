@@ -39,9 +39,9 @@ do
     if
       $MYSH -en $ADD $script
     then
-      echo .. ${script##*/} ... OK
+      echo ".. ${script##*/} ... OK"
     else
-      echo .. ${script##*/} ERROR
+      echo ".. ${script##*/} ERROR"
       exit 1
     fi
   done
