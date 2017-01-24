@@ -1,11 +1,13 @@
 #language: shell
+language: ruby
+rvm:
+  - 2.2
 
 #sudo: false
 
 
 matrix:
   include:
-#      - env: COVERAGE=0 
       - env: COVERAGE=1 
 cache:
   directories:
