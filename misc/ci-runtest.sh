@@ -19,6 +19,5 @@ echo "COVERAGE is $COVERAGE"
 if [ "x1" = "x$COVERAGE" ] ; then
 	bashcov -- ./despf.sh underspell.com
 else
-	bashcov -- ./despf.sh borgesferreira.pt
-	#tests/test-shell.sh || DEBUG=1 tests/test-shell.sh
+	tests/test-shell.sh || DEBUG=1 tests/test-shell.sh
 fi
