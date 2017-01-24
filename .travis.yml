@@ -2,8 +2,8 @@ language: ruby
 rvm:
    - 2.2.5
 matrix:
-  include:
-      - env: COVERAGE=1 
+env:
+   - PROGRAM="bashcov -r coveralls:Coveralls::SimpleCov::Formatter --" 
 
 before_install:
   - sudo apt-get update -qq
@@ -16,14 +16,12 @@ install:
   - gem install bashcov-1.2.1.gem
   -  cd ..
   -  rm -rf bashcov
-
-   - git clone https://github.com/albfan/coveralls-ruby
-   - cd coveralls-ruby/
-   - gem build coveralls-ruby.gemspec 
-   - gem install coveralls-0.8.17.gem
-   - cd ..
-   - rm -rf coveralls-ruby
-
+  - git clone https://github.com/albfan/coveralls-ruby
+  - cd coveralls-ruby/
+  - gem build coveralls-ruby.gemspec 
+  - gem install coveralls-0.8.17.gem
+  - cd ..
+  - rm -rf coveralls-ruby
   - sh -e misc/ci-setup.sh
 script:
   - sh -e misc/ci-runtest.sh

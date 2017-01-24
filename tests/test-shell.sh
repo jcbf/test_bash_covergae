@@ -37,7 +37,7 @@ do
   for script in $BINDIR/../*.sh
   do
     if
-      $MYSH -en $ADD $script
+      $PROGRAM $MYSH -en $ADD $script
     then
       echo .. ${script##*/} ... OK
     else
