@@ -1,35 +1,22 @@
-#language: shell
-dist: trusty
 language: ruby
 rvm:
    - 2.2.5
-   - 2.4.0
-
 matrix:
   include:
       - env: COVERAGE=1 
-cache:
-  directories:
-    - $HOME/.m2/repository
 
 before_install:
   - sudo apt-get update -qq
-
 install:
-   - gem --version
-   - ruby --version
-   - git clone https://github.com/albfan/bashcov.git
-   - cd bashcov/
-   - gem build bashcov.gemspec 
-   - gem install bashcov-1.2.1.gem
-   - cd ..
-   - rm -rf bashcov
-#  - sudo gem install -V bashcov
+  -  gem --version
+  -  ruby --version
+  - git clone https://github.com/albfan/bashcov.git
+  - cd bashcov/
+  - gem build bashcov.gemspec
+  - gem install bashcov-1.2.1.gem
+  -  cd ..
+  -  rm -rf bashcov
   - sudo gem install coveralls
   - sh -e misc/ci-setup.sh
-
 script:
   - sh -e misc/ci-runtest.sh
-
-allow_failures:
-  - rvm: 2.4.0
