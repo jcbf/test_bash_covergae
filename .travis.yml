@@ -3,7 +3,7 @@ rvm:
    - 2.2.5
 matrix:
 env:
-   - COVERAGE=0
+   - DEBUG=1
    - COVERAGE=1
 
 before_install:
