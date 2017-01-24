@@ -22,6 +22,7 @@ install:
 #  - cd ..
   - gem install coveralls
   - gem install bashcov
+  - sudo gem update --system
   - sh -e misc/ci-setup.sh
   - export PATH=$PATH:$PWD
 script:
