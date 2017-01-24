@@ -4,8 +4,6 @@ language: ruby
 rvm:
   - 2.2
 
-#sudo: false
-
 
 matrix:
   include:
@@ -16,6 +14,8 @@ cache:
 
 before_install:
   - sudo apt-get update -qq
+  - sudo find / -name ruby*
+  - ruby-switch
 
 install:
   - sudo gem install -V bashcov
