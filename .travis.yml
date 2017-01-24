@@ -23,7 +23,7 @@ install:
   - gem install coveralls
   - gem install bashcov
   - sh -e misc/ci-setup.sh
-#  - export PATH=$PATH:$PWD
+  - export PATH=$PATH:$PWD
 script:
   - sh -e misc/ci-runtest.sh
   - rm -rf bashcov

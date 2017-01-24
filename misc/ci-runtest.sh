@@ -17,8 +17,8 @@ host jasan.tk || true
 
 echo "COVERAGE is $COVERAGE"
 if [ "x1" = "x$COVERAGE" ] ; then
-	bashcov/bin/bashcov -- ./despf.sh underspell.com
+	bashcov -- ./despf.sh underspell.com
 else
-	bashcov/bin/bashcov -- ./despf.sh borgesferreira.pt
+	bashcov -- ./despf.sh borgesferreira.pt
 	#tests/test-shell.sh || DEBUG=1 tests/test-shell.sh
 fi
