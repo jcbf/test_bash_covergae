@@ -23,9 +23,11 @@ install:
   - gem install coveralls
   - gem install bashcov
   - sudo gem update --system
+  - bundle install
   - sh -e misc/ci-setup.sh
   - export PATH=$PATH:$PWD
 script:
-  - sh -e misc/ci-runtest.sh
+#  - sh -e misc/ci-runtest.sh
+  - bashcov -r coveralls:Coveralls::SimpleCov::Formatter -- ./despf.sh gmail.com
   - rm -rf bashcov
   - rm -rf coveralls-ruby
