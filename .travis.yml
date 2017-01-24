@@ -13,7 +13,7 @@ install:
   - gem install bashcov
   - sudo gem update --system
   - bundle install
-  - sh -e misc/ci-setup.sh
+  - misc/ci-setup.sh
 #  - export PATH="$PATH:$PWD"
 script:
-  - sh -e misc/ci-runtest.sh
+  - misc/ci-runtest.sh
