@@ -2,6 +2,7 @@
 dist: trusty
 language: ruby
 rvm:
+   - 2.2.5
    - 2.4.0
 
 matrix:
@@ -17,8 +18,10 @@ before_install:
 install:
   - sudo gem install -V bashcov
   - sudo gem install coveralls
-  - sudo gem contents bashcov
   - sh -e misc/ci-setup.sh
 
 script:
   - sh -e misc/ci-runtest.sh
+
+allow_failures:
+  - rvm: 2.4.0
