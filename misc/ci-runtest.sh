@@ -11,8 +11,8 @@ do
   type $cmd >/dev/null
 done
 
-which host
-host jasan.tk
+which host || true
+host jasan.tk || true
 
 
 echo "COVERAGE is $COVERAGE"
