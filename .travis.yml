@@ -2,8 +2,7 @@
 dist: trusty
 language: ruby
 rvm:
-  - 2.2
-
+   - 2.4.0
 
 matrix:
   include:
@@ -14,8 +13,6 @@ cache:
 
 before_install:
   - sudo apt-get update -qq
-  - sudo find / -name ruby*
-  - ruby-switch
 
 install:
   - sudo gem install -V bashcov
