@@ -16,7 +16,15 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo gem install -V bashcov
+   - gem --version
+   - ruby --version
+   - git clone https://github.com/albfan/bashcov.git
+   - cd bashcov/
+   - gem build bashcov.gemspec 
+   - gem install bashcov-1.2.1.gem
+   - cd ..
+   - rm -rf bashcov
+#  - sudo gem install -V bashcov
   - sudo gem install coveralls
   - sh -e misc/ci-setup.sh
 
