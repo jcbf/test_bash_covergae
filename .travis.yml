@@ -10,18 +10,20 @@ before_install:
 install:
   -  gem --version
   -  ruby --version
-  - git clone https://github.com/albfan/bashcov.git
-  - cd bashcov/
-  - gem build bashcov.gemspec
-  - gem install bashcov-1.2.1.gem
-  -  cd ..
-  - git clone https://github.com/albfan/coveralls-ruby
-  - cd coveralls-ruby/
-  - gem build coveralls-ruby.gemspec 
-  - gem install coveralls-0.8.17.gem
-  - cd ..
+#  - git clone https://github.com/albfan/bashcov.git
+#  - cd bashcov/
+#  - gem build bashcov.gemspec
+#  - gem install bashcov-1.2.1.gem
+#  -  cd ..
+#  - git clone https://github.com/albfan/coveralls-ruby
+#  - cd coveralls-ruby/
+#  - gem build coveralls-ruby.gemspec 
+#  - gem install coveralls-0.8.17.gem
+#  - cd ..
+  - gem install coveralls
+  - gem install bashcov
   - sh -e misc/ci-setup.sh
-  - export PATH=$PATH:$PWD
+#  - export PATH=$PATH:$PWD
 script:
   - sh -e misc/ci-runtest.sh
   - rm -rf bashcov
