@@ -10,7 +10,7 @@ env:
 before_install:
   - sudo apt-get update -qq
 install:
-  - bundle install Gemfile
+  - bundle install 
   - misc/ci-setup.sh
 #  - export PATH="$PATH:$PWD"
 script:
