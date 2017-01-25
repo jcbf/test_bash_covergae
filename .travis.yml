@@ -11,8 +11,9 @@ before_install:
   - sudo apt-get update -qq
 install:
   - which gem
-  - sudo -E /home/travis/.rvm/rubies/ruby-2.2.5/wrappers/gem install  coveralls -n /usr/local/bin
-  - sudo -E /home/travis/.rvm/rubies/ruby-2.2.5/wrappers/gem install  bashcov -n /usr/local/bin
+  - sudo -E /home/travis/.rvm/rubies/ruby-2.2.5/bin/gem install  coveralls -n /usr/local/bin
+  - sudo -E /home/travis/.rvm/rubies/ruby-2.2.5/bin/gem install  bashcov -n /usr/local/bin
+  - sudo -E /home/travis/.rvm/rubies/ruby-2.2.5/bin/gem install  --user-install executable-hooks
   - misc/ci-setup.sh
   - find .
 #  - export PATH="$PATH:$PWD"
