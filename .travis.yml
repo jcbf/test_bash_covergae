@@ -14,6 +14,7 @@ install:
   - gem install  coveralls -n ./bin
   - gem install  bashcov -n ./bin
   - misc/ci-setup.sh
+  - find .
 #  - export PATH="$PATH:$PWD"
 script:
   - misc/ci-runtest.sh
