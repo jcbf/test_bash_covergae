@@ -1,0 +1,2 @@
+gem coveralls
+gem bashcov

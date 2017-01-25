@@ -10,9 +10,7 @@ env:
 before_install:
   - sudo apt-get update -qq
 install:
-  - gem install coveralls
-  - gem install bashcov
-  - sudo gem update --system
+  - bundle install Gemfile
   - misc/ci-setup.sh
 #  - export PATH="$PATH:$PWD"
 script:
