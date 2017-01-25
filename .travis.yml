@@ -4,14 +4,16 @@ rvm:
 matrix:
 env:
    - COVERAGE=1 DEBUG=1 
-   - COVERAGE=1
-   - COVERAGE=0
+#   - COVERAGE=1
+#   - COVERAGE=0
 
 before_install:
   - sudo apt-get update -qq
 install:
-  - sudo bundle install 
-  - bundle show bashcov
+  - which gem
+  - sudo gem install  coveralls
+  - sudo gem install  bashcov
+  - bundle install
   - misc/ci-setup.sh
 #  - export PATH="$PATH:$PWD"
 script:
