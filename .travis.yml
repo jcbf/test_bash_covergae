@@ -11,8 +11,8 @@ before_install:
   - sudo apt-get update -qq
 install:
   - which gem
-  - gem install  coveralls -n ./bin
-  - gem install  bashcov -n ./bin
+  - sudo -E $GEM_HOME/bin/gem install  coveralls -n /usr/local/bin
+  - sudo -E $GEM_HOME/bin/gem install  bashcov -n /usr/local/bin
   - misc/ci-setup.sh
   - find .
 #  - export PATH="$PATH:$PWD"
