@@ -3,8 +3,9 @@ rvm:
    - 2.2.5
 matrix:
 env:
-   - COVERAGE=1 DEBUG=1 DESPF_NS="8.8.8.8 8.8.4.4"
+   - COVERAGE=1 DEBUG=1 
    - COVERAGE=1
+   - COVERAGE=0
 
 before_install:
   - sudo apt-get update -qq
