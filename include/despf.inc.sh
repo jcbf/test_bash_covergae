@@ -98,10 +98,6 @@ demx() {
 parsepf() {
   host=$1
   if
-    test -n "$DESPF_NS"
-  then
-    myns="$DESPF_NS"
-  elif
     test -n "$USE_UPSTREAM"
   then
     myns=$(findns $host 2>/dev/null)
