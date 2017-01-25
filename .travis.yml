@@ -12,7 +12,6 @@ install:
   - gem install coveralls
   - gem install bashcov
   - gem update --system
-  - bundle install
   - misc/ci-setup.sh
 #  - export PATH="$PATH:$PWD"
 script:
