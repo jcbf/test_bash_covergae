@@ -1,2 +1,4 @@
-gem coveralls
-gem bashcov
+source 'https://rubygems.org' do
+	gem coveralls
+	gem bashcov
+end
