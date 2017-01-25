@@ -10,7 +10,7 @@ env:
 before_install:
   - sudo apt-get update -qq
 install:
-  - bundle install 
+  - sudo bundle install 
   - bundle show bashcov
   - misc/ci-setup.sh
 #  - export PATH="$PATH:$PWD"
