@@ -17,4 +17,4 @@ install:
   - export PATH="$PATH:$PWD:$GEM_PATH:/home/travis/.rvm/gems/ruby-2.2.5/wrappers"
   - misc/ci-setup.sh
 script:
-  -  misc/ci-runtest.sh || true
+  -  misc/ci-runtest.sh 

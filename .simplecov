@@ -7,4 +7,5 @@ SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,
 ]
 SimpleCov.add_filter '/tests/'
+SimpleCov.add_filter '/misc/'
 
