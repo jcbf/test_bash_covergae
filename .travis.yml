@@ -21,4 +21,4 @@ install:
   - misc/ci-setup.sh
 script:
 #  - bashcov -- ./despf.sh borgesferreira.pt || true
-  - /home/travis/.rvm/gems/ruby-2.2.5/wrappers/bashcov -- misc/ci-runtest.sh || true
+  -  misc/ci-runtest.sh || true

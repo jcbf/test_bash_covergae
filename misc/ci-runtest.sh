@@ -17,7 +17,7 @@ host jasan.tk || true
 
 echo "COVERAGE is $COVERAGE"
 if [ "x1" = "x$COVERAGE" ] ; then
-	bashcov -- tests/test-shell.sh
+	/home/travis/.rvm/gems/ruby-2.2.5/wrappers/bashcov -- tests/test-shell.sh
 else
-	bashcov -- ./despf.sh borgesferreira.pt
+	tests/test-shell.sh
 fi
