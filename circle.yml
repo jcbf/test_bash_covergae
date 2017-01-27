@@ -1,0 +1,11 @@
+dependencies:
+  cache_directories:
+    - ../.m2/repository
+
+  pre:
+    - sh -ex misc/ci-setup.sh
+
+## Customize test commands
+test:
+  override:
+    - sh -ex misc/ci-runtest.sh
